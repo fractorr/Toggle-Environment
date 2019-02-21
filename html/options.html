@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Toggle Environment Options</title>
+		
+		<link rel="stylesheet" href="../css/options.css" type="text/css" media="screen" />
+	</head>
+	
+	<body>
+		
+		<div class="container">
+			<h1>Toggle Environment Options <span id="version"></span></h1>
+		
+			<ul class="tabs">
+				<li class="tab-link current" data-tab="tab-1">General</li>
+				<li class="tab-link" data-tab="tab-2">Localhost</li>
+				<li class="tab-link" data-tab="tab-3">Top Level Domains</li>
+			</ul>
+		
+			<div id="tab-1" class="tab-content current clear">
+				<div class="option">
+					<div class="label">
+						<label for="domain">Your Domain</label><br />
+					</div>
+					
+					<div class="field">
+					    <input type="text" name="domain" id="domain" placeholder="Enter Your Domain">
+					</div>
+					
+					<div class="hint">
+						Enter your domain name. <br /><b>EG:</b> mydomain.com
+					</div>
+				</div>
+			    
+				
+				<div class="option">
+					<div class="label">
+						<label for="environments">Your Environments</label><br />
+					</div>
+					
+					<div class="field">
+					    <input type="text" name="environments" id="environments" placeholder="Environment sub domains (comma seperated)">
+					</div>
+					
+					<div class="hint">
+						Enter your environment sub domain(s). <br /><b>EG:</b> dev, stage
+					</div>
+				</div>
+				
+				
+				<div class="option">
+					<div class="label">
+						<label for="structure">Domain Structure</label><br />
+					</div>
+					
+					<div class="field">
+					    <select name="structure" id="structure">
+					    	<option value="site-env">Site - Environment</option>
+					    	<option value="env-site">Environment - Site</option>
+					    </select>
+					</div>
+					
+					<div class="hint">
+						How is your sub domains structured?<br />
+						<b>Site - Environment:</b> sitename.environment.mydomain.com<br />
+						<b>Environment - Site:</b> environment.sitename.mydomain.com
+					</div>
+				</div>
+			</div>
+			
+			<div id="tab-2" class="tab-content clear">
+				<div class="option">
+					<div class="label">
+						<label for="addlocalhost">Add Localhost</label><br />
+					</div>
+					
+					<div class="field">
+					    <select name="addlocalhost" id="addlocalhost">
+					    	<option value="yes">Yes</option>
+					    	<option value="no" >No</option>
+					    </select>
+					</div>
+					
+					<div class="hint">
+						Add Localhost to available environments?
+					</div>
+				</div>
+		   		
+			    
+				<div class="option">
+					<div class="label">
+						<label for="localhostname">Localhost Name</label><br />
+					</div>
+					
+					<div class="field">
+					    <input type="text" name="localhostname" id="localhostname" placeholder="localhost">
+					</div>
+					
+					<div class="hint">
+						localhost
+					</div>
+				</div>
+		   		
+			    
+				<div class="option">
+					<div class="label">
+						<label for="localhostport">Localhost Port</label><br />
+					</div>
+					
+					<div class="field">
+					    <input type="text" name="localhostport" id="localhostport" placeholder="Localhost port">
+					</div>
+					
+					<div class="hint">
+						Localhost port if not 80<br /><b>EG:</b> 8080
+					</div>
+				</div>
+		   		
+			    
+				<div class="option">
+					<div class="label">
+						<label for="localhoststructure">Localhost Structure</label><br />
+					</div>
+					
+					<div class="field">
+					    <select name="localhoststructure" id="localhoststructure">
+					    	<option value="subdomainspost">Sub Domains (localhost.sub)</option>
+					    	<option value="subdomainspre">Sub Domains (sub.localhost)</option>
+					    	<option value="subdirectory">Sub Directory (localhost/subdirectory)</option>
+					    	<option value="standalone">Standalone (Just localhost - NOT SUPPORTED)</option>
+					    </select>
+					</div>
+					
+					<div class="hint">
+						How is your localhost structurted?<br />
+				    	<b>Sub Domains:</b> localhost.sitename<br>
+				    	<b>Sub Domains:</b> sitename.localhost<br>
+				    	<b>Sub Directory:</b> localhost/sitename<br>
+				    	<b>Standalone:</b>  Just localhost - NOT SUPPORTED.<br>
+					</div>
+				</div>
+			</div>
+			
+			<div id="tab-3" class="tab-content clear">
+				<div class="option">
+					<div class="label">
+						<label for="topleveldomainext1">Top Level Domain Extension 1</label><br />
+					</div>
+					
+					<div class="field">
+						<input type="text" name="topleveldomainext1" id="topleveldomainext1" placeholder="Enter top level domain extension EG: (org, net, tv)">
+					    <br /><br />
+					</div>
+					
+					<div class="hint">
+						Enter a top level domain extension other than .com, do not include the . (dot).<br />
+						<b>EG:</b> net or org or tv
+					</div>
+				</div>
+				<div class="option">
+					<div class="label">
+						<label for="topleveldomainnames1">Top Level Domain Names 1</label><br />
+					</div>
+					
+					<div class="field">
+					    <textarea name="topleveldomainnames1" id="topleveldomainnames1" rows="3" placeholder="Enter non .com live domain name(s) 1 Per Line"></textarea>
+					</div>
+					
+					<div class="hint">
+						Enter a top level domain names do not include the domain extension, one per line.<br />
+						<b>EG:</b><br />somesite<br />anothersite		
+					</div>
+				</div>
+			    
+			    <hr>
+			    
+				<div class="option">
+					<div class="label">
+						<label for="topleveldomainext2">Top Level Domain Extension 2</label><br />
+					</div>
+					
+					<div class="field">
+						<input type="text" name="topleveldomainext2" id="topleveldomainext2" placeholder="Enter top level domain extension EG: (org, net, tv)">
+					    <br /><br />
+					</div>
+					
+					<div class="hint">
+						Enter a top level domain extension other than .com, do not include the . (dot).<br />
+						<b>EG:</b> net or org or tv
+					</div>
+				</div>
+				<div class="option">
+					<div class="label">
+						<label for="topleveldomainnames2">Top Level Domain Names 2</label><br />
+					</div>
+					
+					<div class="field">
+					    <textarea name="topleveldomainnames2" id="topleveldomainnames2" rows="3" placeholder="Enter non .com live domain name(s) 1 Per Line"></textarea>
+					</div>
+					
+					<div class="hint">
+						Enter a top level domain names do not include the domain extension, one per line.<br />
+						<b>EG:</b><br />somesite<br />anothersite		
+					</div>
+				</div>
+			    
+		   	    <hr>
+			    
+				<div class="option">
+					<div class="label">
+						<label for="topleveldomainext3">Top Level Domain Extension 3</label><br />
+					</div>
+					
+					<div class="field">
+						<input type="text" name="topleveldomainext3" id="topleveldomainext3" placeholder="Enter top level domain extension EG: (org, net, tv)">
+					    <br /><br />
+					</div>
+					
+					<div class="hint">
+						Enter a top level domain extension other than .com, do not include the . (dot).<br />
+						<b>EG:</b> net or org or tv
+					</div>
+				</div>
+				<div class="option">
+					<div class="label">
+						<label for="topleveldomainnames3">Top Level Domain Names 3</label><br />
+					</div>
+					
+					<div class="field">
+					    <textarea name="topleveldomainnames3" id="topleveldomainnames3" rows="3" placeholder="Enter non .com live domain name(s) 1 Per Line"></textarea>
+					</div>
+					
+					<div class="hint">
+						Enter a top level domain names do not include the domain extension, one per line.<br />
+						<b>EG:</b><br />somesite<br />anothersite		
+					</div>
+				</div>
+			</div>
+			
+			<button id="save">Save Options</button>
+		
+			<div id="status">Options saved</div>
+			
+		</div><!-- container -->
+		
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script src="../js/options.js"></script>
+  		
+	</body>
+</html>
+

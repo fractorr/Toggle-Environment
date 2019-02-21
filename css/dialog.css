@@ -1,0 +1,21 @@
+input {
+	width: 100px;
+	font-size: 12px;
+	font-weight: bold;
+	background: #ededed;
+	border: 1px solid #000000;
+	padding: 10px 20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+
+#gotooptions {
+	margin-top: 10px;
+}
+
+#envform input:first-child {
+	margin-top: 0px !important;
+}
